@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Recommendations</title>
+</head>
+<body>
+    <h1>Travel Recommendations</h1>
+    {% if travel_details %}
+        <ul>
+        {% for travel_name, travel_description, rating in travel_details %}
+            <li>
+                <h2>{{ travel_name }}</h2>
+                <p>{{ travel_description }}</p>
+                <p>Rating: {{ rating }}</p>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No recommendations found.</p>
+    {% endif %}
+</body>
+</html>
